@@ -14,5 +14,11 @@ kotlin {
                 implementation(kotlin("test-junit"))
             }
         }
+
+        val jsMain by existing {
+            dependencies {
+                implementation(kotlin("test-js"))
+            }
+        }
     }
 }

@@ -39,6 +39,7 @@ subprojects {
 
     kotlin {
         jvm()
+        js()
 
         sourceSets {
             commonMain {
@@ -64,6 +65,18 @@ subprojects {
                 dependencies {
                     implementation(kotlin("test"))
                     implementation(kotlin("test-junit"))
+                }
+            }
+
+            val jsMain by existing {
+                dependencies {
+                    implementation(kotlin("stdlib-js"))
+                }
+            }
+
+            val jsTest by existing {
+                dependencies {
+                    implementation(kotlin("test-js"))
                 }
             }
         }
